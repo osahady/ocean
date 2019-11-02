@@ -18,6 +18,24 @@ if ( ! defined( 'ABSPATH' ) ) {
     // Display excerpt
     if ( '500' != get_theme_mod( 'ocean_blog_entry_excerpt_length', '30' ) ) : ?>
 
+        <hr>
+        <div>
+            <span>Price: 
+            <?php
+            // Display custom excerpt
+            echo the_field('price'); ?>
+            </span>           
+        </div>
+        <hr>
+        <div>
+        <span>Phone: 
+            <?php
+            // Display custom excerpt
+            echo the_field('phone'); ?>
+            </span>
+        </div>
+        
+        <hr>
         <p>
             <?php
             // Display custom excerpt

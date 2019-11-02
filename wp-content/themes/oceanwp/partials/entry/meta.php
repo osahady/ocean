@@ -34,8 +34,12 @@ if ( empty( $sections ) ) {
 			<li class="meta-date"<?php oceanwp_schema_markup( 'publish_date' ); ?>><i class="icon-clock"></i><?php echo get_the_date(); ?></li>
 		<?php } ?>
 
+		<!-- <?php //if ( 'categories' == $section ) { ?>
+			<li class="meta-cat"><i class="icon-folder"></i><?php //the_category( ' <span class="owp-sep">/</span> ', get_the_ID() ); ?></li>
+		<?php //} ?> -->
+
 		<?php if ( 'categories' == $section ) { ?>
-			<li class="meta-cat"><i class="icon-folder"></i><?php the_category( ' <span class="owp-sep">/</span> ', get_the_ID() ); ?></li>
+			<li class="meta-cat"><i class="icon-folder"></i><?php the_taxonomies( ' <span class="owp-sep">/</span> ', get_the_ID() ); ?></li>
 		<?php } ?>
 
 		<?php if ( 'comments' == $section && comments_open() && ! post_password_required() ) { ?>
